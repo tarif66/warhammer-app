@@ -4,11 +4,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ModelsService } from '../models.service';
 import { Model } from '../model';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   template: `
     <article>
       <img class="listing-photo" [src]="model?.photo">
@@ -39,6 +40,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
           <input id="email" type="email" formControlName="email">
           
           <button type="submit" class="primary">Apply now</button>
+          <a [routerLink]="['']">Back</a>
         </form>
       </section>
     </article>
