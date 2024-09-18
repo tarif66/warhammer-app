@@ -19,8 +19,8 @@ export class ModelsService {
     return await data.json() ?? {};
   }
 
-  submitApplication(firstName: string, lastName: string, email: string) {
-    console.log(firstName, lastName, email);
+  submitApplication(degats: string) {
+    console.log(degats);
 
   }
 }

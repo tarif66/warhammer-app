@@ -21,25 +21,17 @@ import { RouterModule } from '@angular/router';
       <section class="listing-feature">
         <h2 class="listing-reading">About this model</h2>
         <ul>
-          <li>Units available: {{model?.availableUnits}}</li>
-          <li>Does this location have wifi: {{model?.wifi}}</li>
-          <li>Does this location have laundry: {{model?.laundry}}</li>
+          <li>Wounds: {{model?.life}}</li>
+          <li *ngIf="remainingLife !== undefined">Remaining wounds: {{remainingLife}}</li>
         </ul>
       </section>
 
       <section class="listing-apply">
         <h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
-          <label for="first-name">First name</label>
-          <input id="first-name" type="text" formControlName="firstName">  
-
-          <label for="last-name">Last name</label>
-          <input id="last-name" type="text" formControlName="lastName">  
-
-          <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email">
-          
-          <button type="submit" class="primary">Apply now</button>
+        <form [formGroup]="applyForm" >
+          <label for="dégats">Dégats</label>
+          <input id="dégats" type="text" formControlName="degats">            
+          <button type="submit" class="primary" (click)="showRemainingLife()">Hit</button>
           <a [routerLink]="['']">Back</a>
         </form>
       </section>
@@ -51,10 +43,10 @@ export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   modelsService = inject(ModelsService);
   model: Model | undefined;
+  remainingLife: number | undefined;
+
   applyForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl('')
+    degats: new FormControl(''),
   });
 
   constructor() {
@@ -64,11 +56,31 @@ export class DetailsComponent {
     });
   }
 
-  submitApplication() {
-    this.modelsService.submitApplication(
-      this.applyForm.value.firstName ?? '',
-      this.applyForm.value.lastName ?? '',
-      this.applyForm.value.email ?? ''
-    )
-  }
+
+  showRemainingLife() {
+    const degatsStr = this.applyForm.get('degats')?.value ?? '';
+    const degats = parseInt(degatsStr);
+
+    if (!isNaN(degats) && degats >=0) {
+      if (this.remainingLife !== undefined) {
+        this.remainingLife -= degats;
+      }else if(this.model?.life !== undefined) {
+        this.remainingLife = this.model.life - degats;
+      }
+      console.log('Remaining life:', this.remainingLife);
+      }
+    else {
+      console.log('Invalid degats inputs:');
+    }
+  }  
+
+  calculateRemainingLife(hit:string): number | undefined {
+    const pvs = parseInt(hit);
+    const DEGATS = parseInt(this.applyForm.get('degats')?.value ?? '');
+
+    if(this.model?.life !== undefined && !isNaN(DEGATS)) {
+      return this.model.life - DEGATS;
+    }
+    return undefined;
+  }  
 }

@@ -6,119 +6,15 @@
         "city": "Flesh eater courts",
         "state": "Death",
         "photo": "/assets/Ushoran.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
+        "life": 16
       },
       {
         "id": 1,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 2,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 3,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 4,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 5,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 6,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 7,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 8,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 9,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 10,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      },
-      {
-        "id": 11,
-        "name": "Acme Fresh Start Housing",
-        "city": "Chicago",
-        "state": "IL",
-        "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
+        "name": "Ushoran",
+        "city": "Flesh eater courts",
+        "state": "Death",
+        "photo": "/assets/Ushoran.jpg",
+        "life": 4
       }
       ]
 }
